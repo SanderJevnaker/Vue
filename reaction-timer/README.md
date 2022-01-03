@@ -1,16 +1,16 @@
 # reaction-timer
 
-## Project setup
+## For å installere filene som trengs kjør
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### For å starte applikasjonen kjør
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### For å starte ett build av applikasjon kjør
 ```
 npm run build
 ```
