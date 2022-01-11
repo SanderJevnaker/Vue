@@ -13,8 +13,8 @@
       <option value="designer">Web Designer</option>
     </select>
 
-    <label>Skills (press alt + comma to add):</label>
-    <input type="text" v-model="tempSkill" @keyup.alt="addSkill">
+    <label>Skills (Add skill with comma):</label>
+    <input type="text" v-model="tempSkill" @keyup="addSkill">
     <div v-for="skill in skills" :key="skill" class="pill">
       <span @click="deleteSkill(skill)">{{ skill }}</span>
     </div>
@@ -44,8 +44,8 @@ export default {
     }
   },
   methods: {
-    addSkill($event) {
-      if($event.key === ',' && this.tempSkill) {
+    addSkill(e) {
+      if(e.key === "," && this.tempSkill) {
         if (!this.skills.includes(this.tempSkill)) {
           this.skills.push(this.tempSkill)
         }
